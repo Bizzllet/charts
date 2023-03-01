@@ -68,7 +68,7 @@ service:
   # -- Service type
   type: ClusterIP
   # -- Service port
-  port: 3030
+  port: 4000
   # -- Service port name
   namedPort: backend
 
