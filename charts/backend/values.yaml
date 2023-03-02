@@ -110,6 +110,8 @@ affinity: {}
 
 # -- Backend application config
 backend:
+  config:
+    name: backend
   secrets: {}
     # Example ->
     # test:
