@@ -38,13 +38,13 @@ spec:
           - name: DB_HOST
             valueFrom:
               secretKeyRef:
-                name: {{ include "nodeapp.fullname" . }}
-                key: dbHost
+                name: {{ include "nodeapp.fullname" . }}-db
+                key: host
           - name: DB_PORT
             valueFrom:
               secretKeyRef:
-                name: {{ include "nodeapp.fullname" . }}
-                key: dbPort
+                name: {{ include "nodeapp.fullname" . }}-db
+                key: port
       {{- end }}
       containers:
         - name: {{ .Chart.Name }}
