@@ -27,6 +27,7 @@ spec:
       serviceAccountName: {{ include "nodeapp.serviceAccountName" . }}
       securityContext:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
+      {{- if .Values.backend.secrets.db }}
       initContainers:
       - name: check-db-ready
         image: postgres:9.6.5
@@ -44,6 +45,7 @@ spec:
               secretKeyRef:
                 name: {{ include "nodeapp.fullname" . }}
                 key: dbPort
+      {{- end }}
       containers:
         - name: {{ .Chart.Name }}
           securityContext:
@@ -57,10 +59,8 @@ spec:
           env:
             - name: PORT
               value: {{ .Values.service.port | quote }}
-            - name: SERVICE_NAME
-              value: {{ include "nodeapp.fullname" . }}
-            - name: ORIGIN
-              value: {{ .Values.global.origin | quote }}
+            - name: CORS_ORIGIN
+              value: {{ .Values.global.cors_origin | quote }}
             {{- $root := . }}
             {{- range $ref, $values := .Values.backend.secrets }}
             {{- range $key, $value := $values }}

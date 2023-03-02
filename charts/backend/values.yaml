@@ -23,7 +23,7 @@ global:
     tag: ""
 
   # -- CORS origin 
-  origin: "*"
+  cors_origin: "*"
   
   # -- Override for the full resource. (`"nodeapp.fullname"`)
   imagePullSecrets: []
