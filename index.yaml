@@ -3,6 +3,25 @@ entries:
   nestjs:
   - apiVersion: v2
     appVersion: 0.0.1
+    created: "2023-03-09T13:00:17.579132991Z"
+    description: NestJS chart for bizzllet backend
+    digest: 8d8f6b0be4662f904eeef9e84254d6b26dfe75874a2f66c98ca6174e00625d46
+    icon: https://bizzllet.com/favicon.svg
+    keywords:
+    - web3
+    - bizzllet
+    - nestjs
+    maintainers:
+    - email: arandjel.sarenac@mvpworkshop.co
+      name: ArandjelSarenac
+      url: https://github.com/big-kahuna-burger
+    name: nestjs
+    type: application
+    urls:
+    - https://github.com/Bizzllet/charts/releases/download/nestjs-0.1.5/nestjs-0.1.5.tgz
+    version: 0.1.5
+  - apiVersion: v2
+    appVersion: 0.0.1
     created: "2023-03-02T15:55:02.303786793Z"
     description: NestJS chart for bizzllet backend
     digest: 6f5f082db1775f6ff91fcbb2a5a6e45e3dbaa916e306c6acb7aab5604374d9a1
@@ -77,4 +96,4 @@ entries:
     urls:
     - https://github.com/Bizzllet/charts/releases/download/nestjs-0.1.1/nestjs-0.1.1.tgz
     version: 0.1.1
-generated: "2023-03-02T15:55:02.303797993Z"
+generated: "2023-03-09T13:00:17.579156892Z"
