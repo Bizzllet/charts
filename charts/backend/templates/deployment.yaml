@@ -27,25 +27,6 @@ spec:
       serviceAccountName: {{ include "nodeapp.serviceAccountName" . }}
       securityContext:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
-      {{- if .Values.backend.secrets.db }}
-      initContainers:
-      - name: check-db-ready
-        image: postgres:9.6.5
-        command: ['sh', '-c', 
-          'until pg_isready -h $DB_HOST -p $DB_PORT; 
-          do echo waiting for database; sleep 2; done;']
-        env:
-          - name: DB_HOST
-            valueFrom:
-              secretKeyRef:
-                name: {{ include "nodeapp.fullname" . }}-db
-                key: host
-          - name: DB_PORT
-            valueFrom:
-              secretKeyRef:
-                name: {{ include "nodeapp.fullname" . }}-db
-                key: port
-      {{- end }}
       containers:
         - name: {{ .Chart.Name }}
           securityContext:
@@ -59,8 +40,6 @@ spec:
           env:
             - name: PORT
               value: {{ .Values.service.port | quote }}
-            - name: CORS_ORIGIN
-              value: {{ .Values.global.cors_origin | quote }}
             {{- $root := . }}
             {{- range $ref, $values := .Values.backend.secrets }}
             {{- range $key, $value := $values }}
@@ -73,8 +52,8 @@ spec:
             {{- end }}
           livenessProbe:
             httpGet:
-              path: /health
-              port: {{ .Values.service.namedPort | quote}}
+              path: {{ .Values.backend.livenessProbe.httpGet.path }}
+              port: {{ .Values.service.namedPort | quote }}
             initialDelaySeconds: {{ .Values.backend.livenessProbe.initialDelaySeconds }}
             periodSeconds: {{ .Values.backend.livenessProbe.periodSeconds }}
             timeoutSeconds: {{ .Values.backend.livenessProbe.timeoutSeconds }}
@@ -82,8 +61,8 @@ spec:
             failureThreshold: {{ .Values.backend.livenessProbe.failureThreshold }}
           readinessProbe:
             httpGet:
-              path: /health
-              port: {{ .Values.service.namedPort | quote}}
+              path: {{ .Values.backend.readinessProbe.httpGet.path }}
+              port: {{ .Values.service.namedPort | quote }}
             initialDelaySeconds: {{ .Values.backend.readinessProbe.initialDelaySeconds }}
             periodSeconds: {{ .Values.backend.readinessProbe.periodSeconds }}
             timeoutSeconds: {{ .Values.backend.readinessProbe.timeoutSeconds }}
