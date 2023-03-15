@@ -118,7 +118,8 @@ backend:
     #   key: 123 # should be available as env var TEST_KEY=123
     # xray:
     #   enabled: true # should override XRAY_ENABLED to 1
-
+  volumes: {}
+  volumeMounts: {}
   # -- Liveness probe
   livenessProbe:
     httpGet:
