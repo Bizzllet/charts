@@ -3,7 +3,7 @@ name: nestjs
 description: NestJS chart for bizzllet backend
 icon: "https://bizzllet.com/favicon.svg"
 type: application
-version: 0.1.52
+version: 0.1.53
 appVersion: "0.0.1"
 maintainers:
   - name: ArandjelSarenac
