@@ -1,9 +1,9 @@
 apiVersion: v2
 name: nestjs
-description: NestJS chart for bizzllet backend
+description: NestJS chart for bizzllet mpc service
 icon: "https://bizzllet.com/favicon.svg"
 type: application
-version: 0.1.51
+version: 0.1.0
 appVersion: "0.0.1"
 maintainers:
   - name: ArandjelSarenac
