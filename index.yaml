@@ -3,6 +3,25 @@ entries:
   mpc:
   - apiVersion: v2
     appVersion: 0.0.1
+    created: "2023-04-27T08:29:40.571609012Z"
+    description: NestJS chart for bizzllet mpc service
+    digest: e0ab9da1c106af2b165882aa64a78793b7b4da2931045f2dd32527b2370289a9
+    icon: https://bizzllet.com/favicon.svg
+    keywords:
+    - web3
+    - bizzllet
+    - nestjs
+    maintainers:
+    - email: arandjel.sarenac@gmail.com
+      name: ArandjelSarenac
+      url: https://github.com/big-kahuna-burger
+    name: mpc
+    type: application
+    urls:
+    - https://github.com/Bizzllet/charts/releases/download/mpc-0.1.2/mpc-0.1.2.tgz
+    version: 0.1.2
+  - apiVersion: v2
+    appVersion: 0.0.1
     created: "2023-04-27T07:10:44.664881403Z"
     description: NestJS chart for bizzllet mpc service
     digest: d91ee9571d247d6e2bb70aa616e630c15162cb707aada8602a3d94c0190d0cd1
@@ -173,4 +192,4 @@ entries:
     urls:
     - https://github.com/Bizzllet/charts/releases/download/nestjs-0.1.1/nestjs-0.1.1.tgz
     version: 0.1.1
-generated: "2023-04-27T07:10:44.813375358Z"
+generated: "2023-04-27T08:29:40.571647414Z"
