@@ -21,7 +21,7 @@ kind: Ingress
 metadata:
   name: {{ $fullName }}
   labels:
-    {{- include "nodeapp.labels" (dict "context" . "component" .Values.backend.config.name "name" .Values.backend.config.name) | nindent 4 }}
+    {{- include "nodeapp.labels" (dict "context" . "component" .Values.config.name "name" .Values.config.name) | nindent 4 }}
   {{- with .Values.ingress.annotations }}
   annotations:
     {{- toYaml . | nindent 4 }}
