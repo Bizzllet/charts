@@ -5,9 +5,7 @@ metadata:
   labels:
     {{- include "nodeapp.labels" (dict "context" . "component" .Values.config.name "name" .Values.config.name) | nindent 4 }}
 spec:
-  {{- if not .Values.autoscaling.enabled }}
   replicas: {{ .Values.replicaCount }}
-  {{- end }}
   selector:
     matchLabels:
       {{- include "nodeapp.selectorLabels" (dict "context" . "component" .Values.config.name "name" .Values.config.name) | nindent 6 }}
