@@ -3,7 +3,7 @@ name: nodia
 description: NestJS chart for bizzllet nodia service
 icon: "https://bizzllet.com/favicon.svg"
 type: application
-version: 0.1.0
+version: 0.1.1
 appVersion: "0.0.1"
 maintainers:
   - name: ArandjelSarenac
