@@ -195,6 +195,25 @@ entries:
   nodia:
   - apiVersion: v2
     appVersion: 0.0.1
+    created: "2023-04-28T17:42:31.363272574Z"
+    description: NestJS chart for bizzllet nodia service
+    digest: 37ba5191b9658f77392193a27fd1080cf364d8124fff9c2a4ae12a2ee7113fd2
+    icon: https://bizzllet.com/favicon.svg
+    keywords:
+    - web3
+    - bizzllet
+    - nestjs
+    maintainers:
+    - email: arandjel.sarenac@gmail.com
+      name: ArandjelSarenac
+      url: https://github.com/big-kahuna-burger
+    name: nodia
+    type: application
+    urls:
+    - https://github.com/Bizzllet/charts/releases/download/nodia-0.1.1/nodia-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v2
+    appVersion: 0.0.1
     created: "2023-04-28T17:38:40.193374057Z"
     description: NestJS chart for bizzllet nodia service
     digest: bca28edbceab9fe9ff77967f41498a8b7f91c37d5bc68f2ab30b60594a8d7629
@@ -212,4 +231,4 @@ entries:
     urls:
     - https://github.com/Bizzllet/charts/releases/download/nodia-0.1.0/nodia-0.1.0.tgz
     version: 0.1.0
-generated: "2023-04-28T17:38:40.193392557Z"
+generated: "2023-04-28T17:42:31.363299974Z"
